@@ -1,8 +1,4 @@
-
-
-
-
-//Code for random shuffling of cards
+// Code for random shuffling of cards
 const shuffledArray = (unshuffled) => {
     return unshuffled
         .map(value => ({ value, sort: Math.random() }))
@@ -11,7 +7,7 @@ const shuffledArray = (unshuffled) => {
 };
 
 
-//Code for distribution of first 5 random cards for trump selection by user
+// Code for distribution of first 5 random cards for trump selection by user
 const trumpPlayer = () => {
     const gameCards = [
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, // spades (♠)
@@ -32,7 +28,7 @@ const trumpPlayer = () => {
 }
 
 
-//Code for card distribution to users
+// Code for card distribution to users
 const distributeCards = async (data, key) => {
     try {
         let gameCards = data.gameCards;

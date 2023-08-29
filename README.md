@@ -1,1 +1,1 @@
-# CallBreak_RNG_Cert
+# CallBreak Cards distribution logic.
