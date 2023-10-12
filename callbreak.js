@@ -1,11 +1,12 @@
+const xorshift = require('xorshift');
+
 // Code for random shuffling of cards
 const shuffledArray = (unshuffled) => {
     return unshuffled
-        .map(value => ({ value, sort: Math.random() }))
+        .map(value => ({ value, sort: xorshift.random() }))
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value)
 };
-
 
 // Code for distribution of first 5 random cards for trump selection by user
 const trumpPlayer = () => {
@@ -18,7 +19,7 @@ const trumpPlayer = () => {
 
     const trumpArray = [];
     while (trumpArray.length < 5) {
-        let randomIndex = Math.floor(Math.random() * 52);
+        let randomIndex = Math.floor(xorshift.random() * 52);
         const cardNumber = gameCards[randomIndex];
         if (!trumpArray.includes(cardNumber)) {
             trumpArray.push(cardNumber);
